@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: prints a string
-        run: echo "First Github Action"
+        run: eccho "First Github Action"
       - name: multiline script
         run: |
           node -v
