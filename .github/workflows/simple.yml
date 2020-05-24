@@ -15,3 +15,8 @@ jobs:
           go version
       - name: lists contents
         run: ls -la
+      - name: python command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
