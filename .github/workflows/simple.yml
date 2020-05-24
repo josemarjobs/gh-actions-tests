@@ -1,0 +1,17 @@
+name: Shell Commands
+
+on: [push]
+
+jobs:
+  run-shell-command: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: prints a string
+        run: echo "First Github Action"
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
+          go version
+      - name: lists contents
+        run: ls -la
