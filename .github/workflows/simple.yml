@@ -1,31 +1,31 @@
-# name: Shell Commands
+name: Shell Commands
 
-# on: [push]
+on: [push]
 
-# jobs:
-#   run-shell-command: 
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: prints a string
-#         run: echo "First Github Action"
-#       - name: multiline script
-#         run: |
-#           node -v
-#           npm -v
-#           go version
-#       - name: lists contents
-#         run: ls -la
-#       - name: python command
-#         run: |
-#           import platform
-#           print(platform.processor())
-#         shell: python
-#   run-windows-command:
-#     runs-on: windows-latest
-#     needs: [run-shell-Command]
-#     steps:
-#       - name: pwd in powershell
-#         run: Get-Location
-#       - name: pwd Bash
-#         run: pwd
-#         shell: bash
+jobs:
+  run-shell-command: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: prints a string
+        run: echo "First Github Action"
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
+          go version
+      - name: lists contents
+        run: ls -la
+      - name: python command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
+  run-windows-command:
+    runs-on: windows-latest
+    needs: [run-shell-Command]
+    steps:
+      - name: pwd in powershell
+        run: Get-Location
+      - name: pwd Bash
+        run: pwd
+        shell: bash
